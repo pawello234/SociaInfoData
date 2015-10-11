@@ -2,7 +2,11 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
-sourceCompatibility = 1.5
+// It is needed to have same version java on server and android
+//noinspection GroovyUnusedAssignment
+sourceCompatibility = JavaVersion.VERSION_1_7
+//noinspection GroovyUnusedAssignment
+targetCompatibility = JavaVersion.VERSION_1_7
 
 repositories {
     mavenCentral()
@@ -10,4 +14,10 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    compile "org.projectlombok:lombok:1.16.6"
+
+    // Google libraries
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.googlecode.objectify:objectify:5.1.5'
 }

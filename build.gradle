@@ -1,6 +1,9 @@
 version '1.0'
 
 apply plugin: 'java'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.pawello234'
 
 // It is needed to have same version java on server and android
 //noinspection GroovyUnusedAssignment
@@ -10,6 +13,7 @@ targetCompatibility = JavaVersion.VERSION_1_7
 
 repositories {
     mavenCentral()
+    classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
 }
 
 dependencies {
